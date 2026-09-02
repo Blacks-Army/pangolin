@@ -1378,6 +1378,12 @@ if (build !== "saas") {
         user.adminGeneratePasswordResetCode
     );
 
+    authenticated.post(
+        "/user/:userId/promote-server-admin",
+        verifyUserIsServerAdmin,
+        user.adminPromoteServerAdmin
+    );
+
     authenticated.delete(
         "/user/:userId",
         verifyUserIsServerAdmin,
