@@ -1379,9 +1379,9 @@ if (build !== "saas") {
     );
 
     authenticated.post(
-        "/user/:userId/promote-server-admin",
+        "/user/:userId/server-admin",
         verifyUserIsServerAdmin,
-        user.adminPromoteServerAdmin
+        user.adminSetServerAdmin
     );
 
     authenticated.delete(
